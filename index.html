@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <h2>Archivio</h2>
+            <button id="archive-scroll-toggle" class="archive-toggle" type="button">Scorri archivio</button>
+            <ul id="archive-list"></ul>
+        </aside>
+
+        <div class="content">
+            <header>
+                <h1>Il mio Diario 📅</h1>
+                <p id="month-year-title" class="subtitle"></p>
+            </header>
+
+            <main id="calendar"></main>
+        </div>
+    </div>
+
+    <section id="editor" class="hidden">
+        <div class="modal">
+            <h3>Aggiungi un ricordo per il <span id="current-date"></span></h3>
+            <button id="add-photo-btn" type="button" class="secondary">Aggiungi foto</button>
+            <div id="photo-input-wrapper" class="hidden">
+                <input type="file" id="photo-input" accept="image/*">
+            </div>
+            <div id="photo-preview-wrapper" class="hidden">
+                <p>Anteprima foto salvata:</p>
+                <img id="photo-preview" alt="Anteprima foto">
+            </div>
+            <button id="remove-photo-btn" type="button" class="secondary hidden">Rimuovi foto</button>
+            <textarea id="caption-text" placeholder="Cosa è successo oggi?"></textarea>
+            <button id="save-btn" type="button">Salva</button>
+            <button id="close-btn" type="button">Annulla</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
